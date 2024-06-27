@@ -13,7 +13,6 @@ body {
     overflow-x: hidden;
     width: 100vw;
     scroll-behavior: smooth;
-    /* margin-left: 1em; */
 }
 
 #nevbar {
@@ -49,12 +48,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+    margin: 0em 2em;
 }
 
 .nev ul li {
     list-style: none;
-    margin: 1em 2em;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .nev ul li a {
@@ -62,12 +63,15 @@ body {
     outline: none;
     font-size: 1em;
     color: rgb(26, 67, 61);
-    font-weight: 700;
+    font-weight: 900;
     font-family: 'Italiana', sans-serif;
+    padding: 1em 2em;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    border-top: 5px solid rgb(255, 255, 255);
 }
 
-.nev ul li:hover {
-    scale: 1.2;
+.nev ul li a:hover{
+    border-bottom: 5px solid rgb(26, 67, 61);
 }
 
 
@@ -345,7 +349,7 @@ h1 {
     color: white;
 }
 
-@media screen and (max-width: 678px) {
+/* @media screen and (max-width: 678px) {
     .thumbnail {
         justify-content: start;
     }
@@ -357,7 +361,7 @@ h1 {
     .arrows {
         top: 10%;
     }
-}
+} */
 
 
 
@@ -660,6 +664,7 @@ h1 {
     border: 2px solid rgb(26, 67, 61);
     transition: all 0.1s ease-out;
 }
+
 .expand {
     background: transparent;
     animation: moveCursor2 .5s forwards;
@@ -678,5 +683,103 @@ h1 {
     100% {
         transform: scale(1);
         opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    *{
+        font-size: small;
+        overflow-x: hidden;
+        /* width: 100%; */
+    }
+
+    .logo img {
+        height: 2em;
+        width: 2em;
+        margin: 5px 5px;
+    }
+
+    .nev ul li {
+        margin: 0.5em;
+    }
+
+    .nev ul li a {
+        font-size: 0.65em;
+        font-weight: 700;
+    }
+
+
+    .desk2 {
+        margin: 20px;
+        padding: 20px 10px;
+    }
+
+    .desk2 section img {
+        width: 35vw;
+        height: 45vh;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+
+    .pera {
+        padding: 10px;
+        width: 35vw;
+        height: 45vh;
+    }
+
+    .pera h2 {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .pera p {
+        font-size: 0.75em;
+        padding: 5px;
+    }
+    .pera a {
+        font-size: 0.75em;
+    }
+    .abo2{
+        display: none;
+    }
+    img{
+        height: auto;
+        width: auto;
+    }
+    .thumbnail {
+        display: none;
+    }
+    .slider .list .item .content h2{
+        font-size: 30px;
+    }
+    .slider .list .item .content p{
+        font-size: 15px;
+    }
+    .arrows{
+        display: none;
+    }
+    .slider .list .item .content {
+        position: absolute;
+        left: 10%;
+        top: 40%;
+        width: 500px;
+        max-width: 80%;
+        z-index: 1;
+        text-align: center;
     }
 }

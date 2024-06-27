@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="nevbar">
         <div class="logo">
@@ -58,8 +60,10 @@
                 </div>
                 <div class="a2">
                     <h3>SOCIAL</h3> <br>
-                    <a href=""><i class="fa fa-instagram" style="font-size:30px;color:rgb(26, 67, 61)"></i></a> &nbsp&nbsp
-                    <a href=""></a><i class="fa fa-twitter" style="font-size:30px;color:rgb(26, 67, 61)"></i></a>  &nbsp&nbsp
+                    <a href="https://www.instagram.com/thevid.ceramica?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram" style="font-size:30px;color:rgb(26, 67, 61)"></i></a>
+                    &nbsp&nbsp
+                    <a href=""></a><i class="fa fa-twitter" style="font-size:30px;color:rgb(26, 67, 61)"></i></a>
+                    &nbsp&nbsp
                     <a href=""></a><i class="fa fa-whatsapp" style="font-size:30px;color:rgb(26, 67, 61)"></i></a>
                 </div>
             </div>
@@ -72,12 +76,13 @@
 
 </body>
 <style>
-    body{
+    body {
         margin: 0px;
         padding: 0px;
         overflow-x: hidden;
     }
-     #nevbar {
+
+    #nevbar {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -110,11 +115,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin: 0em 2em;
     }
 
     .nev ul li {
         list-style: none;
-        margin: 1em 2em;
         transition: all 0.3s ease-in-out;
     }
 
@@ -125,11 +130,15 @@
         color: rgb(26, 67, 61);
         font-weight: 700;
         font-family: 'Italiana', sans-serif;
+        padding: 1em 2em;
+        border-bottom: 5px solid rgb(255, 255, 255);
+        border-top: 5px solid rgb(255, 255, 255);
     }
 
-    .nev ul li:hover {
-        scale: 1.2;
+    .nev ul li a:hover {
+        border-bottom: 5px solid rgb(26, 67, 61);
     }
+
 
 
     .material-symbols-outlined {
@@ -219,8 +228,21 @@
 
 
 
-    .img img{
+    .img img {
         width: 100vw;
     }
 </style>
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos >= currentScrollPos) {
+            document.getElementById("nevbar").style.top = "0";
+        } else {
+            document.getElementById("nevbar").style.top = "-72px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+
 </html>

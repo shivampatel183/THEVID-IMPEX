@@ -73,14 +73,14 @@ function scroll_r() {
 
 
 ScrollReveal({
-    reset: true,
-    distance: '60px',
+    reset: false,
+    distance: '20px',
     duration: 1500,
-    delay: 200
+    delay: 100
 });
 
 ScrollReveal().reveal('.gree , .d41 ,.exp1', { delay: 300,origin:'left' });    
-ScrollReveal().reveal('.pera , .w1 ,h1' , { delay: 300 });
+ScrollReveal().reveal('.pera, .w1 ,h1' , { delay: 300 });
 ScrollReveal().reveal('.d32 ,.exp2', { delay: 300 ,origin:'right'});
 
 
@@ -107,17 +107,17 @@ window.onscroll = function() {
   })
 
 
-  const cursor = document.querySelector('.cursor');
+//   const cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', e => {
-    cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
-});
+// document.addEventListener('mousemove', e => {
+//     cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+// });
 
-document.addEventListener('click', e => {
-    cursor.classList.add("expand");
-    setTimeout(() => {
-        cursor.classList.remove("expand");
-    }, 500);
-});
+// document.addEventListener('click', e => {
+//     cursor.classList.add("expand");
+//     setTimeout(() => {
+//         cursor.classList.remove("expand");
+//     }, 500);
+// });
   
 

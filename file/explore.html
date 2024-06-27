@@ -24,7 +24,7 @@
         <div class="nev">
             <ul>
                 <li><a href="../index.html">HOME</a></li>
-                <li><a href="/">Download Catalogue</a></li>
+                <li><a href="./contact.html">Contact US</a></li>
             </ul>
         </div>
     </div>
@@ -243,7 +243,7 @@
                     <h3>SOCIAL</h3> <br>
                     <a href="/" target="_blank"><i class="fa fa-whatsapp"
                             style="font-size:30px;color:rgb(26, 67, 61)"></i></a>
-                    &nbsp &nbsp<a href="https://instagram.com/thevid.impex?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i
+                    &nbsp &nbsp<a href="https://www.instagram.com/thevid.ceramica?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i
                             class="fa fa-instagram" style="font-size:30px;color:rgb(26, 67, 61)"></i></a>
                     &nbsp &nbsp<a href="/" target="_blank"><i class="fa fa-twitter"
                             style="font-size:30px;color:rgb(26, 67, 61)"></i></a>
@@ -363,11 +363,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin: 0em 2em;
     }
 
     .nev ul li {
         list-style: none;
-        margin: 1em 2em;
         transition: all 0.3s ease-in-out;
     }
 
@@ -378,10 +378,13 @@
         color: rgb(26, 67, 61);
         font-weight: 700;
         font-family: 'Italiana', sans-serif;
+        padding: 1em 2em;
+        border-bottom: 5px solid rgb(255, 255, 255);
+        border-top: 5px solid rgb(255, 255, 255);
     }
 
-    .nev ul li:hover {
-        scale: 1.2;
+    .nev ul li a:hover {
+        border-bottom: 5px solid rgb(26, 67, 61);
     }
 
 
@@ -497,7 +500,6 @@
         margin: -4em 2em;
         color: rgb(26, 67, 61);
     }
-
 </style>
 
 
@@ -505,26 +507,36 @@
 
 
 <script>
-    function scroll_l() {
-        var left = document.querySelector(".gree");
-        left.scrollBy(-200, 0)
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos >= currentScrollPos) {
+            document.getElementById("nevbar").style.top = "0";
+        } else {
+            document.getElementById("nevbar").style.top = "-72px";
+        }
+        prevScrollpos = currentScrollPos;
     }
+    // function scroll_l() {
+    //     var left = document.querySelector(".gree");
+    //     left.scrollBy(-200, 0)
+    // }
 
-    ScrollReveal({
-        reset: true,
-        distance: '50px',
-        duration: 1000,
-        delay: 200
-    });
+    // ScrollReveal({
+    //     reset: true,
+    //     distance: '50px',
+    //     duration: 1000,
+    //     delay: 200
+    // });
 
-    ScrollReveal().reveal('.text', { delay: 100, origin: 'left' });
+    // ScrollReveal().reveal('.text', { delay: 100, origin: 'left' });
 
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        $(".pic img").css({
-            width: (100 + scroll / 30) + "%"
-        })
-    })
+    // $(window).scroll(function () {
+    //     var scroll = $(window).scrollTop();
+    //     $(".pic img").css({
+    //         width: (100 + scroll / 30) + "%"
+    //     })
+    // })
 
 </script>
 
